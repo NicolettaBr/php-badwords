@@ -13,6 +13,8 @@
         $paragrafo = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet saepe quam, consequuntur explicabo fuga delectus officiis facere, quos suscipit maxime porro iusto dicta, vero perferendis excepturi voluptatem laborum veniam ipsum.';
         $lunghezza_paragrafo = strlen($paragrafo);
         $badword = $_GET["badword"];
+        $paragrafo_censurato = str_replace('dolor', '***', $paragrafo);
+        $lunghezza_paragrafo_censurato = strlen($paragrafo_censurato);
 
     ?>
     
@@ -22,9 +24,12 @@
     <h2>Lunghezza parafrafo</h2>
     <div> <?php echo $lunghezza_paragrafo; ?> </div>
 
-    <h3> <?php echo $badword; ?> </h3>
+    <h2>Paragrafo censurato</h2>
+    <p> <?php echo $paragrafo_censurato; ?> </p>
 
-    
+    <h2>Lunghezza parafrafo</h2>
+    <div> <?php echo $lunghezza_paragrafo_censurato; ?> </div>
+
     
 </body>
 </html>
